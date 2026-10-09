@@ -17,12 +17,12 @@
                             50: '#f0fdfa',
                             100: '#ccfbf1',
                             400: '#2dd4bf',
-                            500: '#14b8a6', // Primary Teal
+                            500: '#14b8a6',
                             600: '#0d9488',
                             800: '#115e59',
                             900: '#134e4a',
-                            accent: '#06b6d4', // Cyan accent
-                            electric: '#3b82f6', // Electric blue accent
+                            accent: '#06b6d4',
+                            electric: '#3b82f6',
                         }
                     },
                     fontFamily: {
@@ -70,14 +70,12 @@
     <!-- Header / Navbar -->
     <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <!-- Brand Logo -->
             <a href="#hero" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
                 <span class="text-bio-500 font-mono"><i class="fa-solid fa-dna text-bio-400"></i></span>
                 <span class="bg-gradient-to-r from-bio-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">Caiden Perez</span>
                 <span class="text-xs px-2 py-0.5 rounded bg-bio-500/10 text-bio-400 border border-bio-500/20 font-mono hidden sm:inline-block">BME</span>
             </a>
 
-            <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="#about" class="hover:text-bio-400 transition-colors">About</a>
                 <a href="#projects" class="hover:text-bio-400 transition-colors">Projects</a>
@@ -86,7 +84,6 @@
                 <a href="#contact" class="hover:text-bio-400 transition-colors">Contact</a>
             </nav>
 
-            <!-- Social Links & Mobile Trigger -->
             <div class="flex items-center gap-4">
                 <a href="https://www.linkedin.com/in/caiden-perez" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-400 hover:text-bio-400 transition-colors" aria-label="LinkedIn">
                     <i class="fa-brands fa-linkedin text-lg"></i>
@@ -100,7 +97,6 @@
             </div>
         </div>
 
-        <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-900 px-4 pt-2 pb-4 space-y-2">
             <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium hover:text-bio-400 transition-colors">About</a>
             <a href="#projects" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium hover:text-bio-400 transition-colors">Projects</a>
@@ -136,7 +132,6 @@
                         Pioneering microgravity cell culture devices, 3D biomaterial scaffolds, and computational bioinstrumentation to bridge cell biology with smart engineering.
                     </p>
 
-                    <!-- Key Metrics -->
                     <div class="grid grid-cols-3 gap-3 pt-2 max-w-lg mx-auto md:mx-0">
                         <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700/80 text-center">
                             <span class="block text-xl sm:text-2xl font-extrabold text-bio-400">3.5</span>
@@ -152,7 +147,6 @@
                         </div>
                     </div>
 
-                    <!-- CTA Buttons -->
                     <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-4">
                         <a href="#projects" class="px-6 py-3 rounded-lg bg-gradient-to-r from-bio-500 to-cyan-600 hover:from-bio-600 hover:to-cyan-700 text-white font-semibold shadow-lg shadow-bio-500/20 transition-all flex items-center gap-2">
                             <i class="fa-solid fa-flask text-sm"></i> View Projects
@@ -163,7 +157,6 @@
                     </div>
                 </div>
 
-                <!-- Bio Summary Card -->
                 <div class="md:col-span-5 flex justify-center">
                     <div class="relative w-full max-w-md rounded-2xl bg-slate-800/90 border border-slate-700 p-6 shadow-2xl bio-glow">
                         <div class="flex items-center justify-between border-b border-slate-700 pb-4 mb-4">
@@ -328,21 +321,17 @@
                             Designed custom injection molds to cast complex 3D agarose helical scaffolds. Tested 3T3 fibroblast viability and morphology across high stress and curvature regions.
                         </p>
 
-                        <!-- Featured Research Images Container -->
+                        <!-- Project Card Image Preview Grid -->
                         <div class="grid grid-cols-2 gap-2 my-4">
-                            <!-- Image 1 Slot: Live/Dead Cell Microscopy -->
-                            <div class="h-28 rounded-xl border border-dashed border-cyan-500/40 bg-slate-900/80 flex flex-col items-center justify-center p-2 text-center overflow-hidden">
-                                <!-- UNCOMMENT AND EDIT PATH WHEN YOU UPLOAD:
-                                <img src="images/live-dead-stain.jpg" alt="Fluorescence Cell Microscopy" class="w-full h-full object-cover rounded-lg"> -->
-                                <i class="fa-solid fa-microscope text-cyan-400 text-lg mb-1"></i>
-                                <span class="text-[10px] text-slate-400 font-mono">images/Dead-stain.jpg</span>
+                            <!-- Image 1: Live Stain -->
+                            <div class="h-28 rounded-xl border border-slate-700 bg-slate-950 overflow-hidden relative group">
+                                <img src="images/live-stain.png" alt="Live Stain Microscopy" class="w-full h-full object-cover">
+                                <span class="absolute bottom-1 left-1 bg-black/70 text-[10px] px-1.5 py-0.5 rounded text-cyan-400 font-mono">Live Stain</span>
                             </div>
-                            <!-- Image 2 Slot: 7-Day Viability Data -->
-                            <div class="h-28 rounded-xl border border-dashed border-cyan-500/40 bg-slate-900/80 flex flex-col items-center justify-center p-2 text-center overflow-hidden">
-                                <!-- UNCOMMENT AND EDIT PATH WHEN YOU UPLOAD:
-                                <img src="images/viability-chart.png" alt="7-Day Viability Analysis" class="w-full h-full object-cover rounded-lg"> -->
-                                <i class="fa-solid fa-chart-column text-cyan-400 text-lg mb-1"></i>
-                                <span class="text-[10px] text-slate-400 font-mono">images/live-stain.png</span>
+                            <!-- Image 2: Dead Stain -->
+                            <div class="h-28 rounded-xl border border-slate-700 bg-slate-950 overflow-hidden relative group">
+                                <img src="images/Dead-stain.jpg" alt="Dead Stain Microscopy" class="w-full h-full object-cover">
+                                <span class="absolute bottom-1 left-1 bg-black/70 text-[10px] px-1.5 py-0.5 rounded text-cyan-400 font-mono">Dead Stain</span>
                             </div>
                         </div>
 
@@ -470,7 +459,6 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Programming -->
                 <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-10 h-10 rounded-lg bg-bio-500/10 text-bio-400 flex items-center justify-center text-xl">
@@ -489,7 +477,6 @@
                     </div>
                 </div>
 
-                <!-- Lab Skills -->
                 <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl">
@@ -508,7 +495,6 @@
                     </div>
                 </div>
 
-                <!-- Management & Languages -->
                 <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl">
@@ -600,46 +586,33 @@
                 Adapted industrial injection molding concepts to fabricate complex 3D helical agarose scaffolds beyond standard column-based limitations. Maintained 3T3 fibroblast viability and evaluated morphological changes at regions with high curvature and mechanical stress.
             </p>
 
-            <!-- EDITABLE IMAGE GALLERY GRID -->
             <h4 class="text-sm font-bold text-white mb-3 flex items-center gap-2">
                 <i class="fa-solid fa-camera text-cyan-400"></i> Research Visuals & Microscopy Gallery
             </h4>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                <!-- Slot 1: Microscopy -->
-                <div class="p-4 rounded-xl border border-dashed border-slate-700 bg-slate-950/80 text-center flex flex-col items-center justify-center min-h-[160px]">
-                    <!-- Replace this comment with your image tag once uploaded: -->
-                    <!-- <img src="images/live-dead-stain.jpg" alt="Fluorescence Cell Microscopy" class="w-full h-40 object-cover rounded-lg mb-2"> -->
-                    <i class="fa-solid fa-microscope text-2xl text-cyan-400 mb-2"></i>
-                    <span class="text-xs font-mono text-slate-300 font-bold">1. Live/Dead Cell Microscopy</span>
-                    <span class="text-[11px] font-mono text-slate-500 mt-1">Image path: images/dead-stain.jpg</span>
+                <!-- Slot 1: Live Stain -->
+                <div class="p-3 rounded-xl border border-slate-700 bg-slate-950 flex flex-col items-center">
+                    <img src="images/live-stain.png" alt="Live Stain Microscopy" class="w-full h-44 object-cover rounded-lg mb-2 border border-slate-800">
+                    <span class="text-xs font-mono text-slate-300 font-bold">1. Live Cell Stain</span>
                 </div>
 
-                <!-- Slot 2: Viability Data -->
-                <div class="p-4 rounded-xl border border-dashed border-slate-700 bg-slate-950/80 text-center flex flex-col items-center justify-center min-h-[160px]">
-                    <!-- Replace this comment with your image tag once uploaded: -->
-                    <!-- <img src="images/viability-chart.png" alt="7-Day Viability Analysis" class="w-full h-40 object-cover rounded-lg mb-2"> -->
-                    <i class="fa-solid fa-chart-column text-2xl text-cyan-400 mb-2"></i>
-                    <span class="text-xs font-mono text-slate-300 font-bold">2. 7-Day Viability Data</span>
-                    <span class="text-[11px] font-mono text-slate-500 mt-1">Image path: images/live-stain.png</span>
+                <!-- Slot 2: Dead Stain -->
+                <div class="p-3 rounded-xl border border-slate-700 bg-slate-950 flex flex-col items-center">
+                    <img src="images/Dead-stain.jpg" alt="Dead Stain Microscopy" class="w-full h-44 object-cover rounded-lg mb-2 border border-slate-800">
+                    <span class="text-xs font-mono text-slate-300 font-bold">2. Dead Cell Stain</span>
                 </div>
 
-                <!-- Slot 3: Resin Mold -->
-                <div class="p-4 rounded-xl border border-dashed border-slate-700 bg-slate-950/80 text-center flex flex-col items-center justify-center min-h-[160px]">
-                    <!-- Replace this comment with your image tag once uploaded: -->
-                    <!-- <img src="images/resin-mold.jpg" alt="3D Resin Mold Block" class="w-full h-40 object-cover rounded-lg mb-2"> -->
-                    <i class="fa-solid fa-cubes text-2xl text-cyan-400 mb-2"></i>
-                    <span class="text-xs font-mono text-slate-300 font-bold">3. 3D Resin Mold Design</span>
-                    <span class="text-[11px] font-mono text-slate-500 mt-1">Image path: images/Real-mold.jpg</span>
+                <!-- Slot 3: Real Mold -->
+                <div class="p-3 rounded-xl border border-slate-700 bg-slate-950 flex flex-col items-center">
+                    <img src="images/Real-mold.jpg" alt="Fabricated Mold" class="w-full h-44 object-cover rounded-lg mb-2 border border-slate-800">
+                    <span class="text-xs font-mono text-slate-300 font-bold">3. Fabricated Mold</span>
                 </div>
 
-                <!-- Slot 4: Cast Scaffold -->
-                <div class="p-4 rounded-xl border border-dashed border-slate-700 bg-slate-950/80 text-center flex flex-col items-center justify-center min-h-[160px]">
-                    <!-- Replace this comment with your image tag once uploaded: -->
-                    <!-- <img src="images/cast-fusilli.jpg" alt="Cast Agarose Helical Scaffold" class="w-full h-40 object-cover rounded-lg mb-2"> -->
-                    <i class="fa-solid fa-dna text-2xl text-cyan-400 mb-2"></i>
-                    <span class="text-xs font-mono text-slate-300 font-bold">4. Cast Helical Scaffold</span>
-                    <span class="text-[11px] font-mono text-slate-500 mt-1">Image path: images/Rendering-of-mold.jpg/span>
+                <!-- Slot 4: Mold Rendering -->
+                <div class="p-3 rounded-xl border border-slate-700 bg-slate-950 flex flex-col items-center">
+                    <img src="images/Rendering-of-mold.png" alt="CAD Mold Rendering" class="w-full h-44 object-cover rounded-lg mb-2 border border-slate-800">
+                    <span class="text-xs font-mono text-slate-300 font-bold">4. CAD Mold Rendering</span>
                 </div>
             </div>
 
@@ -649,7 +622,7 @@
         </div>
     </div>
 
-    <!-- OTHER MODAL PLACEHOLDERS -->
+    <!-- OTHER MODALS -->
     <div id="microgravity-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
         <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 relative">
             <button onclick="closeModal('microgravity-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
@@ -677,9 +650,7 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script>
-        // Typing Effect
         const words = ["Cell & Tissue Specialist", "Biomaterial Developer", "MATLAB & Python Coder", "Bioinstrumentation Specialist"];
         let wordIndex = 0;
         let charIndex = 0;
@@ -709,7 +680,6 @@
         }
         document.addEventListener("DOMContentLoaded", () => typeEffect());
 
-        // Modal triggers
         function openModal(id) {
             document.getElementById(id).classList.remove("hidden");
             document.getElementById(id).classList.add("flex");
@@ -719,7 +689,6 @@
             document.getElementById(id).classList.remove("flex");
         }
 
-        // Mobile menu trigger
         function toggleMobileMenu() {
             const menu = document.getElementById("mobile-menu");
             menu.classList.toggle("hidden");
