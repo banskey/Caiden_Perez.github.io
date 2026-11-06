@@ -325,13 +325,13 @@
                         <div class="grid grid-cols-2 gap-2 my-4">
                             <!-- Image 1: Live Stain -->
                             <div class="h-28 rounded-xl border border-slate-700 bg-slate-950 overflow-hidden relative group">
-                                <img src="images/live-stain.png" alt=" Light Microscopy" class="w-full h-full object-cover">
-                                <span class="absolute bottom-1 left-1 bg-black/70 text-[10px] px-1.5 py-0.5 rounded text-cyan-400 font-mono">Light Stain</span>
+                                <img src="images/live-stain.png" alt="Microscope View" class="w-full h-full object-cover">
+                                <span class="absolute bottom-1 left-1 bg-black/70 text-[10px] px-1.5 py-0.5 rounded text-cyan-400 font-mono">Microscope View</span>
                             </div>
                             <!-- Image 2: Dead Stain -->
                             <div class="h-28 rounded-xl border border-slate-700 bg-slate-950 overflow-hidden relative group">
                                 <img src="images/Dead-stain.jpg" alt="Live/Dead Stain Microscopy" class="w-full h-full object-cover">
-                                <span class="absolute bottom-1 left-1 bg-black/70 text-[10px] px-1.5 py-0.5 rounded text-cyan-400 font-mono">Live-Dead Stain</span>
+                                <span class="absolute bottom-1 left-1 bg-black/70 text-[10px] px-1.5 py-0.5 rounded text-cyan-400 font-mono">Live/Dead Stain</span>
                             </div>
                         </div>
 
@@ -537,15 +537,15 @@
                                 <a href="https://www.linkedin.com/in/caiden-perez" target="_blank" class="hover:text-bio-400 transition-colors">linkedin.com/in/caiden-perez</a>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-shield-halved text-bio-400 text-base"></i>
-                                <span class="text-xs text-slate-400">Spam protection enabled via Formspree</span>
+                                <i class="fa-solid fa-envelope text-bio-400 text-base"></i>
+                                <a href="mailto:caiden_perez@student.uml.edu" class="hover:text-bio-400 transition-colors">caiden_perez@student.uml.edu</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="md:col-span-7 p-6 rounded-2xl bg-slate-900 border border-slate-800">
-                    <form action="https://formspree.io/f/xbjnqkyv" method="POST" class="space-y-4">
+                    <form id="contact-form" class="space-y-4">
                         <div>
                             <label class="block text-xs font-mono text-slate-400 mb-1">YOUR NAME</label>
                             <input type="text" name="name" required placeholder="Dr. Jane Doe" class="w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-bio-400">
@@ -561,6 +561,7 @@
                         <button type="submit" class="w-full py-3 rounded-lg bg-gradient-to-r from-bio-500 to-cyan-600 hover:from-bio-600 hover:to-cyan-700 text-white font-semibold text-sm transition-all shadow-lg shadow-bio-500/20">
                             Send Message
                         </button>
+                        <p id="form-status" role="status" aria-live="polite" class="text-sm text-center"></p>
                     </form>
                 </div>
             </div>
@@ -593,14 +594,14 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 <!-- Slot 1: Live Stain -->
                 <div class="p-3 rounded-xl border border-slate-700 bg-slate-950 flex flex-col items-center">
-                    <img src="images/live-stain.png" alt="Live Stain Microscopy" class="w-full h-44 object-cover rounded-lg mb-2 border border-slate-800">
-                    <span class="text-xs font-mono text-slate-300 font-bold">1. Live Cell Stain</span>
+                    <img src="images/live-stain.png" alt="Microscope View" class="w-full h-44 object-cover rounded-lg mb-2 border border-slate-800">
+                    <span class="text-xs font-mono text-slate-300 font-bold">1. Microscope View</span>
                 </div>
 
                 <!-- Slot 2: Dead Stain -->
                 <div class="p-3 rounded-xl border border-slate-700 bg-slate-950 flex flex-col items-center">
-                    <img src="images/Dead-stain.jpg" alt="Dead Stain Microscopy" class="w-full h-44 object-cover rounded-lg mb-2 border border-slate-800">
-                    <span class="text-xs font-mono text-slate-300 font-bold">2. Dead Cell Stain</span>
+                    <img src="images/Dead-stain.jpg" alt="Live/Dead Stain" class="w-full h-44 object-cover rounded-lg mb-2 border border-slate-800">
+                    <span class="text-xs font-mono text-slate-300 font-bold">2. Live/Dead Stain</span>
                 </div>
 
                 <!-- Slot 3: Real Mold -->
@@ -694,5 +695,15 @@
             menu.classList.toggle("hidden");
         }
     </script>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = e.target, status = document.getElementById('form-status');
+    var body = f.message.value + '\n\nFrom: ' + f.name.value + ' (' + f.email.value + ')';
+    window.location.href = 'mailto:caiden_perez@student.uml.edu?subject=' + encodeURIComponent('Portfolio message from ' + f.name.value) + '&body=' + encodeURIComponent(body);
+    status.className = 'text-sm text-center text-green-400';
+    status.textContent = 'Opening your email app. Press Send there to finish.';
+});
+</script>
 </body>
 </html>
